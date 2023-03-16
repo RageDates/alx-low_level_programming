@@ -1,7 +1,10 @@
 #include <stdio.h>
+
 /**
- * main - a function that prints out a sting using printf
- * return value of main is 0 if succesful
+ * main - Entry point
+ * 
+ * Description: 'the program's description' 
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
