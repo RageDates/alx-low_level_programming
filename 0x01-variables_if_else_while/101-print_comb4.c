@@ -7,14 +7,13 @@
  */
 int main(void)
 {
-	int i, j, k, count = 1;
-	int count2 = 2;
+	int i, j, k;
 
 	for (i = 0; i <= 7; i++)
 	{
-		for (j = count; j <= 8; j++)
+		for (j = i + 1; j <= 8; j++)
 		{
-			for (k = count2; k <= 9; k++)
+			for (k = j + 1; k <= 9; k++)
 			{
 				if (i != j && i != k && j != k)
 				{
@@ -29,8 +28,6 @@ int main(void)
 				}
 			}
 		}
-		count++;
-		count2++;
 	}
 	putchar('\n');
 	return (0);
