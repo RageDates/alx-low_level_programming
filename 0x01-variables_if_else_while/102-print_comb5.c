@@ -7,5 +7,5 @@
  */
 int main(void)
 {
-	putchar('i');
+	putchar(89);
 }
