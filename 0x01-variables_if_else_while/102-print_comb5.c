@@ -8,4 +8,5 @@
 int main(void)
 {
 	putchar(89);
+	return (0);
 }
