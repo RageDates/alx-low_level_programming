@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * print_last_digit - prints the alphabet
@@ -13,6 +14,6 @@ int print_last_digit(int c)
 	if (c < 0)
 		c = -c;
 	last = c % 10;
-	_putchar(last + 48);
+	printf("%d", last);
 	return (last);
 }
