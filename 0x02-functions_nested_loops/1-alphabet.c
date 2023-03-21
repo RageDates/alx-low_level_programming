@@ -1,19 +1,9 @@
-#include <stdlib.h>
-#include <stdio.h>
-/**
- * main - entry point for the function
- * Return: 0 (success)
- */
-void print_alphabet(void);
+#include "main.h"
 
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
 /**
  * print_alphabet - prints the alphabet
  */
+
 void print_alphabet(void)
 {
 	int i;
