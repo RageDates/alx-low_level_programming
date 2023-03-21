@@ -13,7 +13,7 @@ void jack_bauer(void)
 		for (j = 0; j < 60; j++)
 		{
 			if (i < 10)
-				_printf("0");
+				printf("0");
 			printf("%d", i);
 			printf(":");
 			if (j < 10)
