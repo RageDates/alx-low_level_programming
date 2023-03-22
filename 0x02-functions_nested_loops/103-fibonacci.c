@@ -6,6 +6,9 @@
  */
 int main(void)
 {
-	printf("Hello");
+	int i;
+
+	for (i = 0; i < 10; i++)
+		printf("Hello");
 	return (0);
 }
