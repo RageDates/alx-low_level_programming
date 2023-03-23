@@ -1,10 +1,13 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
  * main - entry point
+ *
+ * Return: always 0
  */
 
-void main(void)
+int main(void)
 {
 	int i;
 
@@ -16,7 +19,10 @@ void main(void)
 			printf("Fizz ");
 		else if (i % 5 == 0)
 			printf("Buzz ");
+		else if (i == 100)
+			printf("%d", i);
 		else
 			printf("%d ", i);
 	}
+	return (0);
 }
