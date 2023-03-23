@@ -10,12 +10,16 @@ int main(void)
 	int i;
 
 	printf("Infinite loop incoming :(\n");
-	
+
 	i = 0;
 
 	while (i < 10)
 	{
 		putchar(i);
+		/**
+		 * i is never incremented so it will always be less than
+		 * 10 therefore will always print 0
+		 */
 	}
 
 	printf("Infinite loop avoided! \\o/\n");
