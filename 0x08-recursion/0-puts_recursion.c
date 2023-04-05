@@ -3,8 +3,8 @@
 #include <stdio.h>
 
 /**
- *  - prints the alphabet
- * @: the number to be checked
+ * _puts_recursion - prints a char
+ * @s: the char to be printed
  */
 void _puts_recursion(char *s)
 {
