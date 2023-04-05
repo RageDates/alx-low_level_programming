@@ -9,5 +9,8 @@
 void _print_rev_recursion(char *s)
 {
 	if (*s != '\0')
-		printf("%c", _print_rev_recursion(s--));
+	{
+		printf("%c", s);
+		_print_rev_recursion(s--);
+	}
 }
