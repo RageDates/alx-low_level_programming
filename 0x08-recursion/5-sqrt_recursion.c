@@ -12,7 +12,7 @@ int _sqrt_recursion(int n)
 {
 	int i = 5;
 
-	if ( i*i != n)
+	if (i * i != n)
 		return (i);
 	return (-1);
 }
