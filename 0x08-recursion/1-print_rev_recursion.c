@@ -8,8 +8,8 @@
  */
 void _print_rev_recursion(char *s)
 {
-	if (len(s) == 0)
-		printf("");
+	if (len(*s) == 0)
+		printf(" ");
 	if (*s)
 	{
 		s++;
