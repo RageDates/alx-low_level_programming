@@ -8,12 +8,12 @@
  */
 void _print_rev_recursion(char *s)
 {
+	if (len(s) == 0)
+		printf("");
 	if (*s)
 	{
 		s++;
 		_print_rev_recursion(s);
 		printf("%c", *s);
 	}
-	else
-		printf("\n");
 }
