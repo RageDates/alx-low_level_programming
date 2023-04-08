@@ -18,19 +18,22 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	else if (ARG < 0)
-	{
-		printf("0\n");
-		return (0);
-	}
 	else
 	{
-		change = (ARG / 25) +
-			(ARG % 25) / 10 +
-			((ARG % 25) % 10) / 5 +
-			(((ARG % 25) % 10) % 5) / 2 +
-			(((ARG % 25) % 10) % 5) % 2;
-		printf("%d\n", change);
-		return (change);
+		if (ARG < 0)
+		{
+			printf("0\n");
+			return (0);
+		}
+		else
+		{
+			change = (ARG / 25) +
+				(ARG % 25) / 10 +
+				((ARG % 25) % 10) / 5 +
+				(((ARG % 25) % 10) % 5) / 2 +
+				(((ARG % 25) % 10) % 5) % 2;
+			printf("%d\n", change);
+		}
 	}
+	return (change);
 }
