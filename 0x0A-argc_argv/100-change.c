@@ -30,6 +30,7 @@ int main(int argc, char *argv[])
 			((ARG % 25) % 10) / 5 +
 			(((ARG % 25) % 10) % 5) / 2 +
 			(((ARG % 25) % 10) % 5) % 2;
+		printf("%d\n", change);
 		return (change);
 	}
 }
