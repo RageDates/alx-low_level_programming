@@ -28,7 +28,8 @@ int main(int argc, char *argv[])
 		change = (ARG / 25) +
 			(ARG % 25) / 10 +
 			((ARG % 25) % 10) / 5 +
-			((ARG % 25) % 10) % 5;
+			(((ARG % 25) % 10) % 5) / 2 +
+			(((ARG % 25) % 10) % 5) % 2;
 		return (change);
 	}
 }
