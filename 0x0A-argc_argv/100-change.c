@@ -10,22 +10,24 @@
  */
 int main(int argc, char *argv[])
 {
+	int ARG = atoi(argc[0]);
+
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	if (atoi(argv[1]) < 0)
+	if (ARG < 0)
 	{
 		printf("0\n");
 		return (0);
 	}
 	else
 	{
-		change = (argv[1] / 25) +
-			(argv[1] % 25) / 10 +
-			((argv[1] % 25) % 10) / 5 +
-			((argv[1] % 25) % 10) % 5
+		change = (ARG / 25) +
+			(ARG % 25) / 10 +
+			((ARG % 25) % 10) / 5 +
+			((ARG % 25) % 10) % 5
 		return (change);
 	}
 }
