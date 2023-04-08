@@ -10,7 +10,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int ARG = atoi(argc[0]);
+	int ARG = atoi(argv[1]);
+	int change;
 
 	if (argc != 2)
 	{
@@ -27,7 +28,7 @@ int main(int argc, char *argv[])
 		change = (ARG / 25) +
 			(ARG % 25) / 10 +
 			((ARG % 25) % 10) / 5 +
-			((ARG % 25) % 10) % 5
+			((ARG % 25) % 10) % 5;
 		return (change);
 	}
 }
