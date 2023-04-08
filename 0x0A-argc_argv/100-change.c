@@ -13,6 +13,7 @@ int main(int argc, char *argv[])
 	int ARG = atoi(argv[1]);
 	int change;
 
+	printf("%d\n", argc);
 	if (argc != 2)
 	{
 		printf("Error\n");
