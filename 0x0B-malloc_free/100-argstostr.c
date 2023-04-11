@@ -7,23 +7,24 @@
  *  - prints the alphabet
  * @: the number to be checked
  */
-char* argstostr(int ac, char** av) {
-	if (ac == 0 || av == NULL) {
-		return NULL;
-	}
-	size_t len = 0;
+char* argstostr(int ac, char** av)
+{
+	size_t length = 0, position = 0;
+	char *ptr;
+
+	if (ac == 0 || av == NULL)
+		return (NULL);
 	for (int i = 0; i < ac; i++) {
-		len += strlen(av[i]) + 1;
+		length += strlen(av[i]) + 1;
 	}
-	char* result = (char*) malloc(len * sizeof(char));
-	if (result == NULL) {
-		return NULL;
+	ptr = (char*) malloc(length * sizeof(char));
+	if (ptr == NULL) {
+		return (NULL);
 	}
-	size_t pos = 0;
 	for (int i = 0; i < ac; i++) {
-		strcpy(result + pos, av[i]);
-		pos += strlen(av[i]);
-		result[pos++] = '\n';
+		strcpy(ptr + position, av[i]);
+		position += strlen(av[i]);
+		ptr[position++] = '\n';
 	}
-	return result;
+	return (ptr);
 }
