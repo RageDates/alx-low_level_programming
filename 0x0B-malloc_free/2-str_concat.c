@@ -12,9 +12,9 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	unsigned long int i;
+	unsigned int i;
 	char *ptr;
-	unsigned long int length = strlen(s1) + strlen(s2);
+	unsigned int length = strlen(s1) + strlen(s2) + 1;
 
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);
