@@ -19,10 +19,9 @@ char *str_concat(char *s1, char *s2)
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);
 	ptr = (char *)malloc(length * sizeof(char));
-	strcat(s1, s2);
 	if (ptr == NULL)
 		return (NULL);
-	for (i = 0; i < length; i++)
-		ptr[i] = s1[i];
+	memcpy(ptr, s1, strlen(s1));
+	memcpy(ptr + strlen(s1), s2, strlen(s2) + 1);
 	return (ptr);
 }
