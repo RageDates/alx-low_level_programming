@@ -4,8 +4,11 @@
 #include <stdlib.h>
 
 /**
- *  - prints the alphabet
- * @: the number to be checked
+ * argstostr - concatenates all the arguments of your program
+ * @ac: int argument
+ * @av: char argument
+ * 
+ * Return: a pointer else NULL is failure
  */
 char *argstostr(int ac, char **av)
 {
