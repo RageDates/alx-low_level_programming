@@ -16,9 +16,9 @@ char *str_concat(char *s1, char *s2)
 	unsigned int length = strlen(s1) + strlen(s2) + 1;
 
 	if (s1 == NULL)
-		s1 = '\0';
+		memset(s1, '\0', sizeof(s1));
 	if (s2 == NULL)
-		s2 = '\0';
+		memset(s2, '\0', sizeof(s2));
 	ptr = (char *)malloc(length * sizeof(char));
 	if (ptr == NULL)
 		return (NULL);
