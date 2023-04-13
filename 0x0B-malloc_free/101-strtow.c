@@ -6,7 +6,8 @@
 
 char **strtow(char *str)
 {
-	unsigned long int i, j;
+	unsigned long int i;
+	int j;
 	int num = 0;
 	char **words;
 	int x = 0;
