@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <string.h>
 /**
  * string_nconcat - concatenate strings
  * @n: The number of bytes
@@ -33,6 +34,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	ptr = malloc(L * sizeof(char));
 	memcpy(ptr, s1, lenS1);
 	memcpy(ptr + lenS1, s2, n);
-	memecpy(ptr + lenS1 + n, End, 1);
+	memcpy(ptr + lenS1 + n, End, 1);
 	return (ptr);
 }
