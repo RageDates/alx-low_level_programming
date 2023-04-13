@@ -6,7 +6,7 @@
 
 char **strtow(char *str)
 {
-	int i, j;
+	unsigned long int i, j;
 	int num = 0;
 	char **words;
 	int x = 0;
@@ -46,14 +46,10 @@ char **strtow(char *str)
 		words[x / MAX] = strdup(word);
 		if (words[x / MAX] == NULL)
 		{
-			for (j = 0;
-		j < x / MAX; j++)
-				free(w
-			ords[j]);
-			free(wor
-			ds);
-			return (
-			NULL);
+			for (j = 0;j < x / MAX; j++)
+				free(words[j]);
+			free(words);
+			return (NULL);
 		}
 	}
 	words[num] = NULL;
