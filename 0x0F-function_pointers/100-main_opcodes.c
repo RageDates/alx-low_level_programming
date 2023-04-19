@@ -25,12 +25,8 @@ int main(int argc, char *argv[])
 	}
 	for (i = 0; i < num_bytes; i++)
 	{
-		if (i == bytes - 1)
-		{
-			printf("%02hhx\n", arr[i]);
-			break;
-		}
 		printf("%02hhx", *((unsigned char *)main_addr + i));
 	}
+	printf("\n");
 	return (0);
 }
