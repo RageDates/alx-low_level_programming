@@ -14,7 +14,7 @@ typedef int (*op_func_t)(int, int);
  */
 typedef struct {
     char *op;
-    op_func_t func;
+    int(*func)(int a, int b);
 } op_t;
 
 void print_name(char *name, void (*f)(char *));
