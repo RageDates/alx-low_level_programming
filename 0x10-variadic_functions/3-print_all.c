@@ -8,45 +8,44 @@
  */
 void print_all(const char * const format, ...)
 {
-	va_list args;
-
-	va_start(args, format);
-
-	char c;
-	int i;
-	float f;
-	char *s;
+	int i = 0;
 	char *str, *sep = "";
-	int index = 0;
 
-	while (format[index] != '\0')
+	va_list list;
+
+	va_start(list, format);
+
+	if (format)
 	{
-		if (format[index] == 'c')
+		while (format[i])
 		{
-			c = (char)va_arg(args, int);
-			printf("%s%c", sep ,c);
+			switch (format[i])
+			{
+				case 'c':
+					printf("%s%c", sep, va_arg(list, int));
+					break;
+				case 'i':
+					printf("%s%d", sep, va_arg(list, int));
+					break;
+				case 'f':
+					printf("%s%f", sep, va_arg(list, double));
+					break;
+				case 's':
+					str = va_arg(list, char *);
+					if (!str)
+						str = "(nil)";
+					printf("%s%s", sep, str);
+					break;
+				default:
+					i++;
+					continue;
+			}
+			sep = ", ";
+			i++;
 		}
-		else if (format[index] == 'i')
-		{
-			i = va_arg(args, int);
-			printf("%s%d", sep, i);
-		}
-		else if (format[index] == 'f')
-		{
-			f = (float)va_arg(args, double);
-			printf("%s%f", sep, f);
-		}
-		else if (format[index] == 's')
-		{
-			s = va_arg(args, char *);
-			if (s == NULL)
-				printf("(nil)");
-			else
-				printf("%s%s", sep, s);
-		}
-		sep = ", ";
-		index++;
 	}
-	va_end(args);
+
 	printf("\n");
+	va_end(list);
+
 }
