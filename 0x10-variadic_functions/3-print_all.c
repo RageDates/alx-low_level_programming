@@ -37,7 +37,7 @@ void print_all(const char * const format, ...)
 		}
 		else if (format[index] == 's')
 		{
-			s = va_arg(args, char*);
+			s = va_arg(args, char *);
 			if (s == NULL)
 				printf("(nil)");
 			else
