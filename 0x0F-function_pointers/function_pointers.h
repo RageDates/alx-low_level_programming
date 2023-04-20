@@ -12,9 +12,10 @@ typedef int (*op_func_t)(int, int);
 /**
  * op_func_t - Typedef for funct
  */
-typedef struct {
-    char *op;
-    int(*func)(int a, int b);
+typedef struct
+{
+	char *op;
+	int (*func)(int a, int b);
 } op_t;
 
 void print_name(char *name, void (*f)(char *));
