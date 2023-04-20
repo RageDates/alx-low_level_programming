@@ -16,6 +16,7 @@ void print_all(const char * const format, ...)
 	int i;
 	float f;
 	char *s;
+	char *str, *sep = "";
 	int index = 0;
 
 	while (format[index] != '\0')
@@ -23,17 +24,17 @@ void print_all(const char * const format, ...)
 		if (format[index] == 'c')
 		{
 			c = (char)va_arg(args, int);
-			printf("%c", c);
+			printf("%s%c", sep ,c);
 		}
 		else if (format[index] == 'i')
 		{
 			i = va_arg(args, int);
-			printf("%d", i);
+			printf("%s%d", sep, i);
 		}
 		else if (format[index] == 'f')
 		{
 			f = (float)va_arg(args, double);
-			printf("%f", f);
+			printf("%s%f", sep, f);
 		}
 		else if (format[index] == 's')
 		{
@@ -41,8 +42,9 @@ void print_all(const char * const format, ...)
 			if (s == NULL)
 				printf("(nil)");
 			else
-				printf("%s", s);
+				printf("%s%s", sep, s);
 		}
+		sep = ", ";
 		index++;
 	}
 	va_end(args);
