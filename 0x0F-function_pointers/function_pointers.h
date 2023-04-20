@@ -10,7 +10,7 @@
  */
 typedef int (*op_func_t)(int, int);
 /**
- * op_func_t - Typedef for funct
+ * struct - Typedef for funct
  */
 typedef struct
 {
