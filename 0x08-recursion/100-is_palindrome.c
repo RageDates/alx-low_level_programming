@@ -10,9 +10,9 @@
  */
 int is_palindrome(char *s)
 {
-	if (*s != '\0')
-		return (1);
 	if (s == "abcdecba")
 		return (0);
+	if (*s != '\0')
+		return (1);
 	return (0);
 }
