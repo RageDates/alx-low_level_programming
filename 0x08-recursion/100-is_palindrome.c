@@ -5,6 +5,8 @@
 /**
  * is_palindrome - prints the alphabet
  * @s: the string to be checked
+ * @i: iterator
+ * @len: length of the string
  *
  * Return: 1 if success else 0
  */
