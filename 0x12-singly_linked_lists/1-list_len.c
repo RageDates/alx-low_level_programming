@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <stddef.h>
+#include "lists.h"
 /**
  * list_len - print the contents of a list
  * @h: a struct list
