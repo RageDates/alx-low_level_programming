@@ -1,9 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "lists.h"
+
 /**
- * delete_nodeint_at_index - Deletes the node with an index
- * @head: Pointer to a pointer to the first node of the list
- * @index: Index of the node to delete
+ * delete_nodeint_at_index - delete the node with an index
+ * @head: a pointer to the first node
+ * @index: index of the node to delete
  *
- * Return: 1 if it succeeded, -1 if it failed
+ * Return: 1 if success, -1 if fail
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
