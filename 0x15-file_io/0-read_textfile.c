@@ -1,6 +1,8 @@
 #include "main.h"
 #include <stdio.h>
 #include <stddef.h>
+#include <stdlib.h>
+#include <unistd.h>
 
 /**
  * read_textfile - read a textfile and print it ot the posix output
