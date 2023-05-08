@@ -20,11 +20,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (filename == NULL)
 		return (0);
 
-	*fp = fopen(filename, "r");
+	fp = fopen(filename, "r");
 	if (fp == NULL)
 		return (0);
 
-	*buffer = malloc(letters + 1);
+	buffer = malloc(letters + 1);
 	if (buffer == NULL)
 	{
 		fclose(fp);
