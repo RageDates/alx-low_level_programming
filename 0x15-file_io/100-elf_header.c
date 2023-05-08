@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <elf.h>
+#include "main.h"
 
 /**
  * check_elf_header - check if the given file has a valid ELF header
