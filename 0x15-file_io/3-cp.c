@@ -18,7 +18,6 @@ int main(int argc, char **argv)
 	int fd_from, fd_to, bytes_read, bytes_written;
 	char buf[BUFSIZE];
 	mode_t file_perms = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
-	/* rw-rw-r-- */
 
 	if (argc != 3)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
