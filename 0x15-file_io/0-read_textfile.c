@@ -13,21 +13,34 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t counter;
-	FILE *fOpen;
-
-	fOpen = fopen("filename.txt", "r");
-	if (fOpen == NULL)
+	if (filename == NULL)
 		return (0);
-	while (letters)
+
+	FILE *fp = fopen(filename, "r");
+	if (fp == NULL)
+		return (0);
+
+	char *buffer = malloc(letters + 1);
+	if (buffer == NULL)
 	{
-		while (fgetc(fOpen) != EOF)
-		{
-			printf("%c", fgetc(fOpen));
-			counter++;
-		}
-		letters--;
+		fclose(fp);
+		return (0);
 	}
-	fclose(fOpen);
-	return (counter);
+
+	ssize_t bytes_read = fread(buffer, 1, letters, fp);
+	if (bytes_read <= 0)
+	{
+		free(buffer);
+		fclose(fp);
+		return (0);
+	}
+
+	ssize_t bytes_written = write(STDOUT_FILENO, buffer, bytes_read);
+	free(buffer);
+	fclose(fp);
+
+	if (bytes_written != bytes_read)
+		return (0);
+
+	return (bytes_written);
 }
