@@ -7,15 +7,15 @@
 #define BUFSIZE 1024
 
 /**
- * main - copies the content of a file to another file
- * @argc: the number of arguments passed to the program
+ * main - copie a file to another file
+ * @argc: the number of arguments
  * @argv: an array of pointers to the arguments
  *
- * Return: 0 on success, or an exit status on error
+ * Return: 0 if success, or exit if error
  */
 int main(int argc, char **argv)
 {
-	int fd_from, fd_to, bytes_read, bytes_written;
+	int fd_from, fd_to, Bread, Bwrite;
 	char buf[BUFSIZE];
 	mode_t file_perms = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 
@@ -32,15 +32,15 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n",
 			argv[2]), exit(99);
 
-	while ((bytes_read = read(fd_from, buf, BUFSIZE)) > 0)
+	while ((Bread = read(fd_from, buf, BUFSIZE)) > 0)
 	{
-		bytes_written = write(fd_to, buf, bytes_read);
-		if (bytes_written != bytes_read || bytes_written == -1)
+		Bwrite = write(fd_to, buf, Bread);
+		if (Bwrite != Bread || Bwrite == -1)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n",
 				argv[2]), exit(99);
 	}
 
-	if (bytes_read == -1)
+	if (Bread == -1)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",
 			argv[1]), exit(98);
 
